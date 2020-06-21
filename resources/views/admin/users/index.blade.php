@@ -10,6 +10,7 @@
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Status</th>
+      <th scope="col">Photo</th>
       <th scope="col">Created at</th>
       <th scope="col">Updated at</th>
     </tr>
@@ -20,9 +21,10 @@
     <tr>
       <th scope="row">{{$user->id}}</th>
 
-      <td>{{$user->name}}</td>
+      <td><a href="{{route('users.edit', $user->id)}}">{{$user->name}}</a></td>
       <td>{{$user->email}}</td>
        <td>{{$user->is_active == 1 ? 'Active' : 'Not Active'}}</td>
+       <td><img height="50" src="{{$user->photo ? $user->photo->file : 'http://placehold.it/400x400'}}" alt=""></td>
       <td>{{$user->created_at->diffForHumans()}}</td>
       <td>{{$user->updated_at->diffForHumans()}}</td>
 
