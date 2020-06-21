@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
+use App\Role;
+use App\Http\Requests\UsersRequest;
 class AdminUsersController extends Controller
 {
     /**
@@ -14,7 +16,8 @@ class AdminUsersController extends Controller
     public function index()
     {
         //
-        return view('admin.users.index');
+        $users = User::all();
+        return view('admin.users.index',compact('users'));
     }
 
     /**
@@ -26,6 +29,7 @@ class AdminUsersController extends Controller
     {
         //
         return view('admin.users.create');
+
     }
 
     /**
@@ -34,9 +38,14 @@ class AdminUsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UsersRequest $request)
     {
         //
+        $inputs = $request->all();
+        if($request->file('photo_id')){
+         return 'photo exist';
+        }
+       // return redirect('/admin/users');
     }
 
     /**
@@ -48,6 +57,7 @@ class AdminUsersController extends Controller
     public function show($id)
     {
         //
+        return view('admin.users.show');
     }
 
     /**

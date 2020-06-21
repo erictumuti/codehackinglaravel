@@ -10,22 +10,22 @@
     <title>Startmin - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="css/metisMenu.min.css" rel="stylesheet">
+    <link href="{{asset('css/metisMenu.min.css')}}" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="css/timeline.css" rel="stylesheet">
+    <link href="{{asset('css/timeline.css')}}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/startmin.css" rel="stylesheet">
+    <link href="{{asset('css/startmin.css')}}" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="css/morris.css" rel="stylesheet">
+    <link href="{{asset('css/morris.css')}}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -126,11 +126,11 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Users<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/users">All Users</a>
+                                <a href="{{route('users.index')}}">All Users</a>
                             </li>
 
                             <li>
-                                <a href="/users/create">Create User</a>
+                                <a href="{{route('users.create')}}">Create User</a>
                             </li>
 
                         </ul>
@@ -294,7 +294,7 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Page Title</h1>
+                    <h1 class="page-header"></h1>
 
                     @yield('content')
                 </div>
@@ -308,16 +308,16 @@
 </div>
 
 <!-- jQuery -->
-<script src="js/jquery.min.js"></script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
 
 <!-- Metis Menu Plugin JavaScript -->
-<script src="js/metisMenu.min.js"></script>
+<script src="{{asset('js/metisMenu.min.js')}}"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="js/startmin.js"></script>
+<script src="{{asset('js/startmin.js')}}"></script>
 
 @yield('footer')
 
