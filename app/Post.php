@@ -9,7 +9,10 @@ class Post extends Model
     //
     protected $fillable = [
 
-        'category_id','photo_id','title','body'
+        'category_id',
+        'photo_id','title',
+        'body',
+        'file'
     ];
 
     public function user(){
