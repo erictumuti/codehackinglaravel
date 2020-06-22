@@ -158,11 +158,11 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Categories<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/categories">All Categories</a>
+                                <a href="{{route('categories.index')}}">All Categories</a>
                             </li>
 
                             <li>
-                                <a href="/categories/create">Create Category</a>
+                                <a href="{{route('categories.create')}}">Create Category</a>
                             </li>
 
                         </ul>
@@ -256,28 +256,6 @@
                 <li>
                     <a href="/profile"><i class="fa fa-dashboard fa-fw"></i>Profile</a>
                 </li>
-
-
-
-
-                <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="">All Posts</a>
-                        </li>
-
-                        <li>
-                            <a href="">Create Post</a>
-                        </li>
-
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-
-
-
-
 
             </ul>
 
