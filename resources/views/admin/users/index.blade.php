@@ -2,9 +2,9 @@
 
 @section('content')
 
-@if(Session::has('deleted_user'))
+@if(Session::has('deleted_post'))
 
-<p class="bg-danger">{{session('deleted_user')}}</p>
+<p class="bg-danger">{{session('deleted_post')}}</p>
 @endif
 
 <h1>Users</h1>
