@@ -23,7 +23,7 @@
       <th scope="row">{{$post->id}}</th>
       <td scope="row"><img height="50" src="{{$post->photo ? $post->photo->file : 'http://placehold.it/400x400'}}" alt=""></td>
       <td scope="row">{{$post->user->name}}</td>
-      <td scope="row">{{$post->category_id}}</td>
+      <td scope="row">{{$post->category ? $post->category->name : 'Uncategorized'}}</td>
       <td scope="row">{{$post->title}}</td>
       <td scope="row">{{$post->body}}</td>
       <td scope="row">{{$post->created_at->diffForHumans()}}</td>
