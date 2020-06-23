@@ -492,8 +492,12 @@ class ComposerStaticInit4144c38fd46c70c19ab18829808ce893
 
     public static $classMap = array (
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
+        'App\\CommentReply' => __DIR__ . '/../..' . '/app/CommentReply.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminCategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminCategoriesController.php',
+        'App\\Http\\Controllers\\AdminMediasController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminMediasController.php',
         'App\\Http\\Controllers\\AdminPostsController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminPostsController.php',
         'App\\Http\\Controllers\\AdminUsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminUsersController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',

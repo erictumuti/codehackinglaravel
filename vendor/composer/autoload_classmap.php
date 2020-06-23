@@ -7,8 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Category' => $baseDir . '/app/Category.php',
+    'App\\Comment' => $baseDir . '/app/Comment.php',
+    'App\\CommentReply' => $baseDir . '/app/CommentReply.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AdminCategoriesController' => $baseDir . '/app/Http/Controllers/AdminCategoriesController.php',
+    'App\\Http\\Controllers\\AdminMediasController' => $baseDir . '/app/Http/Controllers/AdminMediasController.php',
     'App\\Http\\Controllers\\AdminPostsController' => $baseDir . '/app/Http/Controllers/AdminPostsController.php',
     'App\\Http\\Controllers\\AdminUsersController' => $baseDir . '/app/Http/Controllers/AdminUsersController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
