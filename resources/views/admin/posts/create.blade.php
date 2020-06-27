@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('includes.tinyeditor')
+
 <h1>Create Post</h1>
 {!! Form::open(['action' => 'AdminPostsController@store','files'=>true,'method' => 'POST']) !!}
  <div class="form-group">

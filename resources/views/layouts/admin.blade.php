@@ -69,9 +69,15 @@
                     </li>
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                     </li>
-                    <li class="divider"></li>
-                    <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                    </li>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                 </ul>
                 <!-- /.dropdown-user -->
             </li>
@@ -150,6 +156,9 @@
                             <li>
                                 <a href="{{route('posts.create')}}">Create Post</a>
                             </li>
+                            <li>
+                                <a href="{{route('comments.index')}}">Comments</a>
+                            </li>
 
                         </ul>
                         <!-- /.nav-second-level -->
@@ -161,11 +170,6 @@
                             <li>
                                 <a href="{{route('categories.index')}}">All Categories</a>
                             </li>
-
-                            <li>
-                                <a href="{{route('categories.create')}}">Create Category</a>
-                            </li>
-
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>

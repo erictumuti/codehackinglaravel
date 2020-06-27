@@ -17,6 +17,7 @@
       <th scope="col">Category</th>
       <th scope="col">Title</th>
       <th scope="col">Body</th>
+      <th scope="col">Post</th>
       <th scope="col">Created at</th>
       <th scope="col">Updated at</th>
     </tr>
@@ -31,6 +32,8 @@
       <td scope="row">{{$post->category ? $post->category->name : 'Uncategorized'}}</td>
       <td scope="row">{{$post->title}}</td>
       <td scope="row">{{Str::limit($post->body, 30)}}</td>
+      <td scope="row"><a href="{{route('home.post', $post->slug)}}">View Post</a></td>
+      <td scope="row"><a href="{{route('comments.show', $post->id)}}">View Comments</a></td>
       <td scope="row">{{$post->created_at->diffForHumans()}}</td>
       <td scope="row">{{$post->updated_at->diffForHumans()}}</td>
 
@@ -39,4 +42,9 @@
     @endif
   </tbody>
 </table>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-5">
+  {{$posts->render()}}
+  </div>
+</div>
 @endsection

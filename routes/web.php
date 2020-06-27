@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+if (version_compare(PHP_VERSION, '7.2.0', '>=')) {
+    // Ignores notices and reports all other kinds... and warnings
+    error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+    // error_reporting(E_ALL ^ E_WARNING); // Maybe this is enough
+}
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,6 +25,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/post/{id}', ['as'=>'home.post','uses'=>'AdminPostsController@post']);
 Route::get('/admin', function(){
 
     return view('admin.index');
@@ -40,6 +46,6 @@ Route::resource('admin/comment/replies','CommentRepliesController');
 
 
 
-
+Route::delete('admin/delete/media', 'AdminMediasController@deleteMedia');
 
 // Route::get('admin/media/upload', ['as'=>'media.upload', 'uses'=>'AdminMediasController@store']);
