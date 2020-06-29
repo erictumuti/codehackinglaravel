@@ -25,13 +25,13 @@ Auth::Routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/post/{id}', ['as'=>'home.post','uses'=>'HomeController@post']);
 Route::get('/admin', 'AdminController@index');
-// Route::group(['middleware'=>'admin'], function(){
+Route::group(['middleware'=>'admin'], function(){
 
-    
+    Route::resource('admin/users', 'AdminUsersController');  
 
 
-// });
-Route::resource('admin/users', 'AdminUsersController');
+});
+// Route::resource('admin/users', 'AdminUsersController');
 Route::resource('admin/posts', 'AdminPostsController');
 Route::resource('admin/categories', 'AdminCategoriesController');
 Route::resource('admin/media', 'AdminMediasController');

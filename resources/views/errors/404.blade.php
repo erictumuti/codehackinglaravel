@@ -2,6 +2,6 @@
 
 @section('content')
 
-<h1 class="text-center">no page available</h1>
+<h1 class="text-center">Ooooooooops!!!! This page is prohibited to users</h1>
 
 @stop

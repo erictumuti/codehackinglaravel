@@ -47,7 +47,7 @@ class User extends Authenticatable
         return $this->belongsTo('App\Photo');
     }
     public function isAdmin(){
-        if($this->role->name == "Administrator"){
+        if($this->role_id == "1"){
 
             return true;
         }
